@@ -17,6 +17,7 @@
 		<java.version>17</java.version>
 		<deeplearning4j.version>1.0.0-M2.1</deeplearning4j.version>
 		<nd4j.version>1.0.0-M2.1</nd4j.version>
+		<weka.version>3.8.5</weka.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -61,6 +62,31 @@
 			<artifactId>nd4j-native-platform</artifactId>
 			<version>${nd4j.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.deeplearning4j</groupId>
+			<artifactId>deeplearning4j-modelimport</artifactId>
+			<version>${deeplearning4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>nz.ac.waikato.cms.weka</groupId>
+			<artifactId>weka-stable</artifactId>
+			<version>${weka.version}</version>
+		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.github.fommil.netlib</groupId>-->
+<!--			<artifactId>all</artifactId>-->
+<!--			<version>1.1.2</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>com.github.fommil.netlib</groupId>-->
+<!--			<artifactId>core</artifactId>-->
+<!--			<version>1.1.2</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>com.github.fommil.netlib</groupId>-->
+<!--			<artifactId>native_ref-java</artifactId>-->
+<!--			<version>1.1</version>-->
+<!--		</dependency>-->
 	</dependencies>
 
 	<build>

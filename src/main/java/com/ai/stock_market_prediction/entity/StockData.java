@@ -21,4 +21,6 @@ public class StockData {
     private double close;
     private double high;
     private double low;
+    private long sharesTraded;
+    private double turnoverInCr;
 }

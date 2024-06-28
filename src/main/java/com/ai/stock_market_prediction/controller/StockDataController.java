@@ -23,20 +23,19 @@ public class StockDataController {
     }
 
     @PostMapping("/train")
-    public String trainModel() {
+    public String trainModel() throws Exception {
         stockDataService.trainModel();
         return "Model trained successfully";
     }
 
     @GetMapping("/predict")
     public String predict(@RequestParam double open, @RequestParam double close,
-                          @RequestParam double high, @RequestParam double low) {
-        boolean willBeHigher = stockDataService.predictNextDay(open, close, high, low);
-        return willBeHigher ? "The price will go higher" : "The price will go lower";
+                          @RequestParam double high, @RequestParam double low) throws Exception {
+        return stockDataService.predictNextDay(open, close, high, low);
     }
 
     @PostMapping("/evaluate")
-    public String evaluateModel() {
+    public String evaluateModel() throws Exception {
         return stockDataService.evaluateModel();
     }
 }
